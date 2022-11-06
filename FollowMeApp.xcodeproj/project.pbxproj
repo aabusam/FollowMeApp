@@ -10,8 +10,13 @@
 		EBB751142914516C00F5995B /* FollowMeAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB751132914516C00F5995B /* FollowMeAppApp.swift */; };
 		EBB751182914516E00F5995B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBB751172914516E00F5995B /* Assets.xcassets */; };
 		EBB7511B2914516E00F5995B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBB7511A2914516E00F5995B /* Preview Assets.xcassets */; };
-		EBB751222914BB5E00F5995B /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB751212914BB5E00F5995B /* Model.swift */; };
-		EBB751292916F16B00F5995B /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB751282916F16B00F5995B /* MapView.swift */; };
+		EBB75136291729DA00F5995B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB75135291729DA00F5995B /* HomeView.swift */; };
+		EBB7513829172A8000F5995B /* FollowMeMapViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB7513729172A8000F5995B /* FollowMeMapViewRepresentable.swift */; };
+		EBB7513A29172D4B00F5995B /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB7513929172D4B00F5995B /* LocationManager.swift */; };
+		EBB75140291744F300F5995B /* UserSearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB7513F291744F300F5995B /* UserSearchBarView.swift */; };
+		EBB751432917474300F5995B /* HomeViewActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB751422917474300F5995B /* HomeViewActionButton.swift */; };
+		EBB7514629174A6600F5995B /* UserSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB7514529174A6600F5995B /* UserSearchView.swift */; };
+		EBB751482917504700F5995B /* UserSearchResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB751472917504700F5995B /* UserSearchResults.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,9 +24,14 @@
 		EBB751132914516C00F5995B /* FollowMeAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowMeAppApp.swift; sourceTree = "<group>"; };
 		EBB751172914516E00F5995B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EBB7511A2914516E00F5995B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		EBB751212914BB5E00F5995B /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		EBB751252914C42F00F5995B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		EBB751282916F16B00F5995B /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		EBB75135291729DA00F5995B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		EBB7513729172A8000F5995B /* FollowMeMapViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowMeMapViewRepresentable.swift; sourceTree = "<group>"; };
+		EBB7513929172D4B00F5995B /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		EBB7513F291744F300F5995B /* UserSearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSearchBarView.swift; sourceTree = "<group>"; };
+		EBB751422917474300F5995B /* HomeViewActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewActionButton.swift; sourceTree = "<group>"; };
+		EBB7514529174A6600F5995B /* UserSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSearchView.swift; sourceTree = "<group>"; };
+		EBB751472917504700F5995B /* UserSearchResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSearchResults.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,10 +64,12 @@
 		EBB751122914516C00F5995B /* FollowMeApp */ = {
 			isa = PBXGroup;
 			children = (
+				EBB7512E2917296D00F5995B /* App */,
+				EBB7512F2917297200F5995B /* Core */,
+				EBB751302917298100F5995B /* Extentions */,
+				EBB751322917299A00F5995B /* Managers */,
+				EBB751312917299300F5995B /* Models */,
 				EBB751252914C42F00F5995B /* Info.plist */,
-				EBB751132914516C00F5995B /* FollowMeAppApp.swift */,
-				EBB751282916F16B00F5995B /* MapView.swift */,
-				EBB751212914BB5E00F5995B /* Model.swift */,
 				EBB751172914516E00F5995B /* Assets.xcassets */,
 				EBB751192914516E00F5995B /* Preview Content */,
 			);
@@ -70,6 +82,97 @@
 				EBB7511A2914516E00F5995B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EBB7512E2917296D00F5995B /* App */ = {
+			isa = PBXGroup;
+			children = (
+				EBB751132914516C00F5995B /* FollowMeAppApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		EBB7512F2917297200F5995B /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				EBB75134291729C300F5995B /* Views */,
+				EBB75133291729B900F5995B /* ViewModels */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		EBB751302917298100F5995B /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extentions;
+			sourceTree = "<group>";
+		};
+		EBB751312917299300F5995B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EBB751322917299A00F5995B /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				EBB7513929172D4B00F5995B /* LocationManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		EBB75133291729B900F5995B /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		EBB75134291729C300F5995B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EBB7513C2917448000F5995B /* UserSearch */,
+				EBB7513B2917446500F5995B /* Home */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EBB7513B2917446500F5995B /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				EBB75135291729DA00F5995B /* HomeView.swift */,
+				EBB7513729172A8000F5995B /* FollowMeMapViewRepresentable.swift */,
+				EBB751422917474300F5995B /* HomeViewActionButton.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		EBB7513C2917448000F5995B /* UserSearch */ = {
+			isa = PBXGroup;
+			children = (
+				EBB7513D291744A600F5995B /* View */,
+				EBB7513E291744AB00F5995B /* ViewModel */,
+			);
+			path = UserSearch;
+			sourceTree = "<group>";
+		};
+		EBB7513D291744A600F5995B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EBB7513F291744F300F5995B /* UserSearchBarView.swift */,
+				EBB7514529174A6600F5995B /* UserSearchView.swift */,
+				EBB751472917504700F5995B /* UserSearchResults.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EBB7513E291744AB00F5995B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,9 +245,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EBB751222914BB5E00F5995B /* Model.swift in Sources */,
-				EBB751292916F16B00F5995B /* MapView.swift in Sources */,
+				EBB7513A29172D4B00F5995B /* LocationManager.swift in Sources */,
+				EBB751482917504700F5995B /* UserSearchResults.swift in Sources */,
+				EBB751432917474300F5995B /* HomeViewActionButton.swift in Sources */,
+				EBB7513829172A8000F5995B /* FollowMeMapViewRepresentable.swift in Sources */,
 				EBB751142914516C00F5995B /* FollowMeAppApp.swift in Sources */,
+				EBB75140291744F300F5995B /* UserSearchBarView.swift in Sources */,
+				EBB7514629174A6600F5995B /* UserSearchView.swift in Sources */,
+				EBB75136291729DA00F5995B /* HomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
