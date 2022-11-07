@@ -10,8 +10,11 @@ import SwiftUI
 struct HomeView: View {
     @State private var showUserSearchView = false
     
+    @StateObject var logInViewModel: LoginViewModel = LoginViewModel()
     var body: some View {
         ZStack(alignment: .top) {
+            
+          
             
             FollowMeMapViewRepresentable()
                 .ignoresSafeArea()
@@ -28,13 +31,22 @@ struct HomeView: View {
                     }
                 }
             }
+            // put in setting
+            LogOutButton(viewModel: logInViewModel)
+            
             
             HomeViewActionButton(showUserSearchView: $showUserSearchView)
                 .padding(.leading)
                 .padding(.top, 4 )
+            
+            
         }
+        .navigationBarHidden(true)
     }
 }
+
+
+
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {

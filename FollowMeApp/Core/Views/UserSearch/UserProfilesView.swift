@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct UserSearchResults: View {
+struct UserProfilesView: View {
     var body: some View {
         HStack{
             Image(systemName: "person.circle.fill")
@@ -31,8 +31,8 @@ struct UserSearchResults: View {
     }
 }
 
-struct UserSearchResults_Previews: PreviewProvider {
+struct UserProfilesView_Previews: PreviewProvider {
     static var previews: some View {
-        UserSearchResults()
+        UserProfilesView()
     }
 }
