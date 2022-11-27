@@ -7,51 +7,48 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB1BD32729328C52004C8023 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1BD32629328C52004C8023 /* HomeView.swift */; };
+		EB1BD32929328C96004C8023 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1BD32829328C96004C8023 /* MapView.swift */; };
+		EB1BD338293295C9004C8023 /* LogOutButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1BD333293295C9004C8023 /* LogOutButton.swift */; };
+		EB1BD339293295C9004C8023 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1BD334293295C9004C8023 /* SignUpViewModel.swift */; };
+		EB1BD33A293295C9004C8023 /* SighnUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1BD335293295C9004C8023 /* SighnUpView.swift */; };
+		EB1BD33B293295C9004C8023 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1BD336293295C9004C8023 /* LoginViewModel.swift */; };
+		EB1BD33C293295C9004C8023 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1BD337293295C9004C8023 /* LoginView.swift */; };
+		EB1BD33E293295F7004C8023 /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1BD33D293295F7004C8023 /* TextFieldView.swift */; };
+		EB1BD3402932963C004C8023 /* PassWordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1BD33F2932963C004C8023 /* PassWordView.swift */; };
+		EB1BD3422932FBB5004C8023 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1BD3412932FBB5004C8023 /* ProfileView.swift */; };
+		EB1BD3442932FD58004C8023 /* QRCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1BD3432932FD58004C8023 /* QRCodeView.swift */; };
+		EB1BD3472933195B004C8023 /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = EB1BD3462933195B004C8023 /* CodeScanner */; };
 		EBB751142914516C00F5995B /* FollowMeAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB751132914516C00F5995B /* FollowMeAppApp.swift */; };
 		EBB751182914516E00F5995B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBB751172914516E00F5995B /* Assets.xcassets */; };
 		EBB7511B2914516E00F5995B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBB7511A2914516E00F5995B /* Preview Assets.xcassets */; };
-		EBB75136291729DA00F5995B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB75135291729DA00F5995B /* HomeView.swift */; };
-		EBB7513829172A8000F5995B /* FollowMeMapViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB7513729172A8000F5995B /* FollowMeMapViewRepresentable.swift */; };
-		EBB7513A29172D4B00F5995B /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB7513929172D4B00F5995B /* LocationManager.swift */; };
-		EBB75140291744F300F5995B /* UserSearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB7513F291744F300F5995B /* UserSearchBarView.swift */; };
-		EBB751432917474300F5995B /* HomeViewActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB751422917474300F5995B /* HomeViewActionButton.swift */; };
-		EBB7514629174A6600F5995B /* UserSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB7514529174A6600F5995B /* UserSearchView.swift */; };
-		EBB751482917504700F5995B /* UserProfilesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB751472917504700F5995B /* UserProfilesView.swift */; };
-		EBB7514A291769BA00F5995B /* UserSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB75149291769BA00F5995B /* UserSearchViewModel.swift */; };
 		EBB7514D29176DB200F5995B /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = EBB7514C29176DB200F5995B /* FirebaseAnalytics */; };
 		EBB7514F29176DB200F5995B /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = EBB7514E29176DB200F5995B /* FirebaseDatabase */; };
 		EBB7515129176DB200F5995B /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = EBB7515029176DB200F5995B /* FirebaseFirestore */; };
 		EBB7515F2918607200F5995B /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = EBB7515E2918607200F5995B /* FirebaseAuth */; };
-		EBB751612918741300F5995B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB751602918741300F5995B /* LoginView.swift */; };
-		EBB751632918749200F5995B /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB751622918749200F5995B /* LoginViewModel.swift */; };
-		EBB751672918787F00F5995B /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB751662918787F00F5995B /* TextFieldView.swift */; };
-		EBB7516929187CD600F5995B /* PassWordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB7516829187CD600F5995B /* PassWordView.swift */; };
 		EBB7516B2918944700F5995B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB7516A2918944700F5995B /* ContentView.swift */; };
-		EBB7516D2918980C00F5995B /* LogOutButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB7516C2918980C00F5995B /* LogOutButton.swift */; };
 		EBB751712918A85800F5995B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EBB751702918A85700F5995B /* GoogleService-Info.plist */; };
 		EBB751742918A8A200F5995B /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = EBB751732918A8A200F5995B /* FirebaseAuth */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EB1BD32629328C52004C8023 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		EB1BD32829328C96004C8023 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		EB1BD333293295C9004C8023 /* LogOutButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogOutButton.swift; sourceTree = "<group>"; };
+		EB1BD334293295C9004C8023 /* SignUpViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		EB1BD335293295C9004C8023 /* SighnUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SighnUpView.swift; sourceTree = "<group>"; };
+		EB1BD336293295C9004C8023 /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		EB1BD337293295C9004C8023 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		EB1BD33D293295F7004C8023 /* TextFieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
+		EB1BD33F2932963C004C8023 /* PassWordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PassWordView.swift; sourceTree = "<group>"; };
+		EB1BD3412932FBB5004C8023 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		EB1BD3432932FD58004C8023 /* QRCodeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeView.swift; sourceTree = "<group>"; };
 		EBB751102914516C00F5995B /* FollowMeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FollowMeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBB751132914516C00F5995B /* FollowMeAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowMeAppApp.swift; sourceTree = "<group>"; };
 		EBB751172914516E00F5995B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EBB7511A2914516E00F5995B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EBB751252914C42F00F5995B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		EBB75135291729DA00F5995B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		EBB7513729172A8000F5995B /* FollowMeMapViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowMeMapViewRepresentable.swift; sourceTree = "<group>"; };
-		EBB7513929172D4B00F5995B /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
-		EBB7513F291744F300F5995B /* UserSearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSearchBarView.swift; sourceTree = "<group>"; };
-		EBB751422917474300F5995B /* HomeViewActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewActionButton.swift; sourceTree = "<group>"; };
-		EBB7514529174A6600F5995B /* UserSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSearchView.swift; sourceTree = "<group>"; };
-		EBB751472917504700F5995B /* UserProfilesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfilesView.swift; sourceTree = "<group>"; };
-		EBB75149291769BA00F5995B /* UserSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSearchViewModel.swift; sourceTree = "<group>"; };
-		EBB751602918741300F5995B /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		EBB751622918749200F5995B /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
-		EBB751662918787F00F5995B /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
-		EBB7516829187CD600F5995B /* PassWordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassWordView.swift; sourceTree = "<group>"; };
 		EBB7516A2918944700F5995B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		EBB7516C2918980C00F5995B /* LogOutButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogOutButton.swift; sourceTree = "<group>"; };
 		EBB751702918A85700F5995B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -62,6 +59,7 @@
 			files = (
 				EBB7514F29176DB200F5995B /* FirebaseDatabase in Frameworks */,
 				EBB751742918A8A200F5995B /* FirebaseAuth in Frameworks */,
+				EB1BD3472933195B004C8023 /* CodeScanner in Frameworks */,
 				EBB7514D29176DB200F5995B /* FirebaseAnalytics in Frameworks */,
 				EBB7515129176DB200F5995B /* FirebaseFirestore in Frameworks */,
 				EBB7515F2918607200F5995B /* FirebaseAuth in Frameworks */,
@@ -71,6 +69,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EB1BD331293294F6004C8023 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				EB1BD333293295C9004C8023 /* LogOutButton.swift */,
+				EB1BD32829328C96004C8023 /* MapView.swift */,
+				EB1BD32629328C52004C8023 /* HomeView.swift */,
+				EB1BD3432932FD58004C8023 /* QRCodeView.swift */,
+				EB1BD3412932FBB5004C8023 /* ProfileView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		EB1BD3322932950D004C8023 /* SignIn_SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				EB1BD337293295C9004C8023 /* LoginView.swift */,
+				EB1BD33D293295F7004C8023 /* TextFieldView.swift */,
+				EB1BD33F2932963C004C8023 /* PassWordView.swift */,
+				EB1BD336293295C9004C8023 /* LoginViewModel.swift */,
+				EB1BD335293295C9004C8023 /* SighnUpView.swift */,
+				EB1BD334293295C9004C8023 /* SignUpViewModel.swift */,
+			);
+			path = SignIn_SignUp;
+			sourceTree = "<group>";
+		};
 		EBB751072914516C00F5995B = {
 			isa = PBXGroup;
 			children = (
@@ -92,10 +115,6 @@
 			isa = PBXGroup;
 			children = (
 				EBB7512E2917296D00F5995B /* App */,
-				EBB7512F2917297200F5995B /* Core */,
-				EBB751302917298100F5995B /* Extentions */,
-				EBB751322917299A00F5995B /* Managers */,
-				EBB751312917299300F5995B /* Models */,
 				EBB751252914C42F00F5995B /* Info.plist */,
 				EBB751702918A85700F5995B /* GoogleService-Info.plist */,
 				EBB751172914516E00F5995B /* Assets.xcassets */,
@@ -116,90 +135,11 @@
 			isa = PBXGroup;
 			children = (
 				EBB751132914516C00F5995B /* FollowMeAppApp.swift */,
+				EBB7516A2918944700F5995B /* ContentView.swift */,
+				EB1BD3322932950D004C8023 /* SignIn_SignUp */,
+				EB1BD331293294F6004C8023 /* Home */,
 			);
 			path = App;
-			sourceTree = "<group>";
-		};
-		EBB7512F2917297200F5995B /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				EBB75133291729B900F5995B /* ViewModels */,
-				EBB75134291729C300F5995B /* Views */,
-			);
-			path = Core;
-			sourceTree = "<group>";
-		};
-		EBB751302917298100F5995B /* Extentions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Extentions;
-			sourceTree = "<group>";
-		};
-		EBB751312917299300F5995B /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		EBB751322917299A00F5995B /* Managers */ = {
-			isa = PBXGroup;
-			children = (
-				EBB7513929172D4B00F5995B /* LocationManager.swift */,
-			);
-			path = Managers;
-			sourceTree = "<group>";
-		};
-		EBB75133291729B900F5995B /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-				EBB75149291769BA00F5995B /* UserSearchViewModel.swift */,
-				EBB751622918749200F5995B /* LoginViewModel.swift */,
-			);
-			path = ViewModels;
-			sourceTree = "<group>";
-		};
-		EBB75134291729C300F5995B /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				EBB7513C2917448000F5995B /* UserSearch */,
-				EBB7513B2917446500F5995B /* Home */,
-				EBB7515A29185A2000F5995B /* StartingPage */,
-				EBB7516A2918944700F5995B /* ContentView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		EBB7513B2917446500F5995B /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				EBB75135291729DA00F5995B /* HomeView.swift */,
-				EBB7513729172A8000F5995B /* FollowMeMapViewRepresentable.swift */,
-				EBB751422917474300F5995B /* HomeViewActionButton.swift */,
-			);
-			path = Home;
-			sourceTree = "<group>";
-		};
-		EBB7513C2917448000F5995B /* UserSearch */ = {
-			isa = PBXGroup;
-			children = (
-				EBB751472917504700F5995B /* UserProfilesView.swift */,
-				EBB7513F291744F300F5995B /* UserSearchBarView.swift */,
-				EBB7514529174A6600F5995B /* UserSearchView.swift */,
-			);
-			path = UserSearch;
-			sourceTree = "<group>";
-		};
-		EBB7515A29185A2000F5995B /* StartingPage */ = {
-			isa = PBXGroup;
-			children = (
-				EBB751602918741300F5995B /* LoginView.swift */,
-				EBB7516829187CD600F5995B /* PassWordView.swift */,
-				EBB751662918787F00F5995B /* TextFieldView.swift */,
-				EBB7516C2918980C00F5995B /* LogOutButton.swift */,
-			);
-			path = StartingPage;
 			sourceTree = "<group>";
 		};
 		EBB7515D2918607200F5995B /* Frameworks */ = {
@@ -231,6 +171,7 @@
 				EBB7515029176DB200F5995B /* FirebaseFirestore */,
 				EBB7515E2918607200F5995B /* FirebaseAuth */,
 				EBB751732918A8A200F5995B /* FirebaseAuth */,
+				EB1BD3462933195B004C8023 /* CodeScanner */,
 			);
 			productName = FollowMeApp;
 			productReference = EBB751102914516C00F5995B /* FollowMeApp.app */;
@@ -263,6 +204,7 @@
 			packageReferences = (
 				EBB7514B29176DB200F5995B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				EBB751722918A8A100F5995B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				EB1BD3452933195B004C8023 /* XCRemoteSwiftPackageReference "CodeScanner" */,
 			);
 			productRefGroup = EBB751112914516C00F5995B /* Products */;
 			projectDirPath = "";
@@ -291,21 +233,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EBB7513A29172D4B00F5995B /* LocationManager.swift in Sources */,
-				EBB751482917504700F5995B /* UserProfilesView.swift in Sources */,
+				EB1BD32729328C52004C8023 /* HomeView.swift in Sources */,
+				EB1BD33B293295C9004C8023 /* LoginViewModel.swift in Sources */,
+				EB1BD338293295C9004C8023 /* LogOutButton.swift in Sources */,
+				EB1BD339293295C9004C8023 /* SignUpViewModel.swift in Sources */,
+				EB1BD33C293295C9004C8023 /* LoginView.swift in Sources */,
+				EB1BD33A293295C9004C8023 /* SighnUpView.swift in Sources */,
+				EB1BD33E293295F7004C8023 /* TextFieldView.swift in Sources */,
+				EB1BD32929328C96004C8023 /* MapView.swift in Sources */,
 				EBB7516B2918944700F5995B /* ContentView.swift in Sources */,
-				EBB751672918787F00F5995B /* TextFieldView.swift in Sources */,
-				EBB751432917474300F5995B /* HomeViewActionButton.swift in Sources */,
-				EBB7516D2918980C00F5995B /* LogOutButton.swift in Sources */,
-				EBB7513829172A8000F5995B /* FollowMeMapViewRepresentable.swift in Sources */,
 				EBB751142914516C00F5995B /* FollowMeAppApp.swift in Sources */,
-				EBB75140291744F300F5995B /* UserSearchBarView.swift in Sources */,
-				EBB7514629174A6600F5995B /* UserSearchView.swift in Sources */,
-				EBB75136291729DA00F5995B /* HomeView.swift in Sources */,
-				EBB751612918741300F5995B /* LoginView.swift in Sources */,
-				EBB751632918749200F5995B /* LoginViewModel.swift in Sources */,
-				EBB7514A291769BA00F5995B /* UserSearchViewModel.swift in Sources */,
-				EBB7516929187CD600F5995B /* PassWordView.swift in Sources */,
+				EB1BD3442932FD58004C8023 /* QRCodeView.swift in Sources */,
+				EB1BD3422932FBB5004C8023 /* ProfileView.swift in Sources */,
+				EB1BD3402932963C004C8023 /* PassWordView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,7 +378,10 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FollowMeApp/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "we need the camera to scan QR code";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "";
+				INFOPLIST_KEY_NSLocationUsageDescription = "";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app needs your locaion to show it on the map.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -470,7 +413,10 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FollowMeApp/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "we need the camera to scan QR code";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "";
+				INFOPLIST_KEY_NSLocationUsageDescription = "";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app needs your locaion to show it on the map.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -514,6 +460,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		EB1BD3452933195B004C8023 /* XCRemoteSwiftPackageReference "CodeScanner" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/twostraws/CodeScanner";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 		EBB7514B29176DB200F5995B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -533,6 +487,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		EB1BD3462933195B004C8023 /* CodeScanner */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EB1BD3452933195B004C8023 /* XCRemoteSwiftPackageReference "CodeScanner" */;
+			productName = CodeScanner;
+		};
 		EBB7514C29176DB200F5995B /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = EBB7514B29176DB200F5995B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

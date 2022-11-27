@@ -9,26 +9,43 @@ import SwiftUI
 
 struct LoginView: View {
     
-    @StateObject var viewModel: LoginViewModel = LoginViewModel()
+    @StateObject var viewModel: LoginViewModel 
     @State var useFaceID:Bool = false
     
     var body: some View {
-        VStack {
-            Text("Login")
-                .font(.title)
-            .foregroundColor(.black)
-        
-            //MARK: Text Fields
+        ZStack(alignment: .leading) {
             
-            TextFieldView(fieldText: "Email", inputText: $viewModel.email)
-            PassWordView(fieldText: "Password", inputText: $viewModel.password)
+            VStack {
+                Text("Login")
+                    .font(.title)
+                .foregroundColor(.black)
             
-            //MARK: user prompt to ask to store FaceID on next time
+                //MARK: Text Fields
+                
+                TextFieldView(fieldText: "Email", inputText: $viewModel.email)
+                PassWordView(fieldText: "Password", inputText: $viewModel.password)
+                
+                //MARK: user prompt to ask to store FaceID on next time
+                
+                FaceIdButton(viewModel: viewModel, useFaceID: $useFaceID)
+                
+                loginButton(viewModel: viewModel, useFaceID: $useFaceID)
+                    .alert(viewModel.errorMsg, isPresented: $viewModel.showError) {}
+                
+                Button {
+                    viewModel.showSignUp.toggle()
+                } label: {
+                    
+                    Text("Don't have an account ? Sign Up")
+                }
+                
+              
+
+            }
             
-            FaceIdButton(viewModel: viewModel, useFaceID: $useFaceID)
-            
-            loginButton(viewModel: viewModel, useFaceID: $useFaceID)
-                .alert(viewModel.errorMsg, isPresented: $viewModel.showError) {}
+            if viewModel.showSignUp {
+                SighnUpView(showSignUp: $viewModel.showSignUp)
+            }
         }
         
     }
@@ -46,6 +63,7 @@ struct loginButton: View{
             Task{
                 do{
                     try await viewModel.loginUser(useFaceID: useFaceID)
+                   
                 }
                 catch{
                     viewModel.errorMsg = error.localizedDescription
@@ -121,7 +139,7 @@ struct FaceIdButton: View{
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView()
+        LoginView(viewModel: LoginViewModel())
     }
 }
 
