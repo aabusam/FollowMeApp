@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		EB1BD32729328C52004C8023 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1BD32629328C52004C8023 /* HomeView.swift */; };
-		EB1BD32929328C96004C8023 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1BD32829328C96004C8023 /* MapView.swift */; };
+		EB1BD32929328C96004C8023 /* MapViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1BD32829328C96004C8023 /* MapViewRepresentable.swift */; };
 		EB1BD338293295C9004C8023 /* LogOutButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1BD333293295C9004C8023 /* LogOutButton.swift */; };
 		EB1BD339293295C9004C8023 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1BD334293295C9004C8023 /* SignUpViewModel.swift */; };
 		EB1BD33A293295C9004C8023 /* SighnUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1BD335293295C9004C8023 /* SighnUpView.swift */; };
@@ -19,6 +19,8 @@
 		EB1BD3422932FBB5004C8023 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1BD3412932FBB5004C8023 /* ProfileView.swift */; };
 		EB1BD3442932FD58004C8023 /* QRCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1BD3432932FD58004C8023 /* QRCodeView.swift */; };
 		EB1BD3472933195B004C8023 /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = EB1BD3462933195B004C8023 /* CodeScanner */; };
+		EB1F5DAF29359A2D009E4155 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1F5DAE29359A2D009E4155 /* LocationManager.swift */; };
+		EB1F5DB129361EFD009E4155 /* LocationSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1F5DB029361EFD009E4155 /* LocationSearchViewModel.swift */; };
 		EBB751142914516C00F5995B /* FollowMeAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB751132914516C00F5995B /* FollowMeAppApp.swift */; };
 		EBB751182914516E00F5995B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBB751172914516E00F5995B /* Assets.xcassets */; };
 		EBB7511B2914516E00F5995B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBB7511A2914516E00F5995B /* Preview Assets.xcassets */; };
@@ -33,7 +35,7 @@
 
 /* Begin PBXFileReference section */
 		EB1BD32629328C52004C8023 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		EB1BD32829328C96004C8023 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		EB1BD32829328C96004C8023 /* MapViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewRepresentable.swift; sourceTree = "<group>"; };
 		EB1BD333293295C9004C8023 /* LogOutButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogOutButton.swift; sourceTree = "<group>"; };
 		EB1BD334293295C9004C8023 /* SignUpViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		EB1BD335293295C9004C8023 /* SighnUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SighnUpView.swift; sourceTree = "<group>"; };
@@ -43,6 +45,8 @@
 		EB1BD33F2932963C004C8023 /* PassWordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PassWordView.swift; sourceTree = "<group>"; };
 		EB1BD3412932FBB5004C8023 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		EB1BD3432932FD58004C8023 /* QRCodeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeView.swift; sourceTree = "<group>"; };
+		EB1F5DAE29359A2D009E4155 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		EB1F5DB029361EFD009E4155 /* LocationSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchViewModel.swift; sourceTree = "<group>"; };
 		EBB751102914516C00F5995B /* FollowMeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FollowMeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBB751132914516C00F5995B /* FollowMeAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowMeAppApp.swift; sourceTree = "<group>"; };
 		EBB751172914516E00F5995B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -73,7 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				EB1BD333293295C9004C8023 /* LogOutButton.swift */,
-				EB1BD32829328C96004C8023 /* MapView.swift */,
+				EB1F5DAE29359A2D009E4155 /* LocationManager.swift */,
 				EB1BD32629328C52004C8023 /* HomeView.swift */,
 				EB1BD3432932FD58004C8023 /* QRCodeView.swift */,
 				EB1BD3412932FBB5004C8023 /* ProfileView.swift */,
@@ -92,6 +96,15 @@
 				EB1BD334293295C9004C8023 /* SignUpViewModel.swift */,
 			);
 			path = SignIn_SignUp;
+			sourceTree = "<group>";
+		};
+		EBAEFE32293BF88E00A360C2 /* CarTracking */ = {
+			isa = PBXGroup;
+			children = (
+				EB1BD32829328C96004C8023 /* MapViewRepresentable.swift */,
+				EB1F5DB029361EFD009E4155 /* LocationSearchViewModel.swift */,
+			);
+			path = CarTracking;
 			sourceTree = "<group>";
 		};
 		EBB751072914516C00F5995B = {
@@ -115,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				EBB7512E2917296D00F5995B /* App */,
+				EBAEFE32293BF88E00A360C2 /* CarTracking */,
 				EBB751252914C42F00F5995B /* Info.plist */,
 				EBB751702918A85700F5995B /* GoogleService-Info.plist */,
 				EBB751172914516E00F5995B /* Assets.xcassets */,
@@ -236,13 +250,15 @@
 				EB1BD32729328C52004C8023 /* HomeView.swift in Sources */,
 				EB1BD33B293295C9004C8023 /* LoginViewModel.swift in Sources */,
 				EB1BD338293295C9004C8023 /* LogOutButton.swift in Sources */,
+				EB1F5DB129361EFD009E4155 /* LocationSearchViewModel.swift in Sources */,
 				EB1BD339293295C9004C8023 /* SignUpViewModel.swift in Sources */,
 				EB1BD33C293295C9004C8023 /* LoginView.swift in Sources */,
 				EB1BD33A293295C9004C8023 /* SighnUpView.swift in Sources */,
 				EB1BD33E293295F7004C8023 /* TextFieldView.swift in Sources */,
-				EB1BD32929328C96004C8023 /* MapView.swift in Sources */,
+				EB1BD32929328C96004C8023 /* MapViewRepresentable.swift in Sources */,
 				EBB7516B2918944700F5995B /* ContentView.swift in Sources */,
 				EBB751142914516C00F5995B /* FollowMeAppApp.swift in Sources */,
+				EB1F5DAF29359A2D009E4155 /* LocationManager.swift in Sources */,
 				EB1BD3442932FD58004C8023 /* QRCodeView.swift in Sources */,
 				EB1BD3422932FBB5004C8023 /* ProfileView.swift in Sources */,
 				EB1BD3402932963C004C8023 /* PassWordView.swift in Sources */,

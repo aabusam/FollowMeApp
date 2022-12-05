@@ -17,9 +17,8 @@ class SignUPViewModel: ObservableObject{
     @Published var email: String = ""
     @Published var password: String = ""
     @Published var firstName: String = ""
-    @Published var lastName: String = ""
     @Published var carModel: String = ""
-    @Published var licsencePlate: String = ""
+
     
     @Published var showSignUp : Bool = false
 
@@ -37,7 +36,7 @@ class SignUPViewModel: ObservableObject{
             
             let db = Firestore.firestore()
             
-            db.collection("Bookings").document(self.userId).setData(["firstName": self.firstName, "lastName": self.lastName, "carModel": self.carModel, "licsencePlate": self.licsencePlate]){ [self] (err) in
+            db.collection("Users").document(self.userId).setData(["firstName": self.firstName, "carModel": self.carModel]){ [self] (err) in
                 
                 if err != nil{
                     

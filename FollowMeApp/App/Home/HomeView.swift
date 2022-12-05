@@ -11,24 +11,9 @@ import CoreLocation
 import Firebase
 
 struct HomeView : View {
+    @EnvironmentObject var locationSearchViewModel: LocationSearchViewModel
     @StateObject var viewModel:LoginViewModel
-    
-    @State var map = MKMapView()
-    @State var manager = CLLocationManager()
-    @State var alert = false
-    @State var source : CLLocationCoordinate2D!
-    @State var destination : CLLocationCoordinate2D!
-    @State var name = ""
-    @State var distance = ""
-    @State var time = ""
-    @State var show = false
-    @State var loading = false
-    @State var book = false
-    @State var doc = ""
-    @State var data : Data = .init(count: 0)
-    @State var search = false
-    
-    @State var showProfileView:Bool = false
+ 
     
     var body: some View{
         
@@ -39,42 +24,37 @@ struct HomeView : View {
                         
                         VStack() {
                             
-                            Text(self.destination != nil ? "Following \(viewModel.name)" : "Follow Me")
+                            Text("Follow Me")
                                 .font(.title)
                             
-                            if self.destination != nil{
-                                
-                                Text(self.name)
-                                    .fontWeight(.bold)
-                            }
                         }.frame(maxWidth: .infinity, alignment: .center)
                         
                         Button {
-                            showProfileView.toggle()
+                            
+                            locationSearchViewModel.showProfileView.toggle()
                         } label: {
-                            Image(systemName: showProfileView ? "arrow.left" : "person.crop.circle")
+                            Image(systemName: locationSearchViewModel.showProfileView ? "arrow.left" : "person.crop.circle")
                                 .font(.title)
                                 .foregroundColor(.black)
                         }
-                        .frame(maxWidth: .infinity, alignment: showProfileView ? .leading: .trailing)
+                        .frame(maxWidth: .infinity, alignment: locationSearchViewModel.showProfileView ? .leading: .trailing)
 
                     }
                     .padding()
                     .background(Color.white)
                     
-                    MapView(map: self.$map, manager: self.$manager, alert: self.$alert, source: self.$source, destination: self.$destination, name: self.$name,distance: self.$distance,time: self.$time, show: self.$show)
-                    .onAppear {
+
+                    MapViewRepresentable()
                     
-                        self.manager.requestAlwaysAuthorization()
-                    }
-                    
+                
                     LogOutButton(viewModel: viewModel)
                         .padding()
                 }
        
-            if showProfileView {
+            if locationSearchViewModel.showProfileView {
                 ProfileView(name: viewModel.name, carModel: viewModel.carModel, userId: viewModel.userId)
                     .background(Color(.white))
+                    .clipShape(RoundedRectangle(cornerRadius: 20))
                     
             }
            

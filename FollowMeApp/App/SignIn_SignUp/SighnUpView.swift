@@ -13,37 +13,44 @@ struct SighnUpView: View {
     @Binding var showSignUp: Bool
     var body: some View {
         
-        VStack {
+        VStack() {
             
-            Button {
-                showSignUp.toggle()
-            } label: {
-                Image(systemName: "arrow.left")
-                    .font(.title)
-                    .foregroundColor(.black)
-                    .padding()
-                    .background(.white)
-                    .padding(.leading)
+            HStack {
+                Button {
+                    showSignUp.toggle()
+                } label: {
+                    Image(systemName: "arrow.left")
+                        .font(.title)
+                        .foregroundColor(.black)
+                        .padding()
+                        .background(.white)
+                        .padding(.leading)
             }.frame( alignment: .topLeading)
-
+            
+                
+                Spacer()
+            }
             
             Text("Sign Up")
                 .font(.title)
             .fontWeight(.bold)
             
-            HStack{
-                TextFieldView(fieldText: "First Name", inputText: $viewModel.firstName)
-                TextFieldView(fieldText: "Last Email", inputText: $viewModel.lastName)
-            }
             
-            TextFieldView(fieldText: "Email", inputText: $viewModel.email)
-            PassWordView(fieldText: "Password", inputText: $viewModel.password)
-            
-            HStack{
+            VStack() {
+                
+                TextFieldView(fieldText: "Name", inputText: $viewModel.firstName)
+
+                
+                TextFieldView(fieldText: "Email", inputText: $viewModel.email)
+                PassWordView(fieldText: "Password", inputText: $viewModel.password)
+                
+
                 TextFieldView(fieldText: "Car Model", inputText: $viewModel.carModel)
-                TextFieldView(fieldText: "Licsence Plate", inputText: $viewModel.licsencePlate)
+       
+                SignUpButton(viewModel: viewModel, showSignUp: $showSignUp)
             }
-            SignUpButton(viewModel: viewModel, showSignUp: $showSignUp)
+            
+            Spacer()
         }
         .background(.white)
     }
@@ -55,12 +62,11 @@ struct SignUpButton: View{
     @Binding var showSignUp: Bool
     
     private func SignUpCondition(viewModel:SignUPViewModel) -> Bool {
-        viewModel.lastName == "" ||
         viewModel.firstName == "" ||
         viewModel.email == "" ||
         viewModel.password == "" ||
-        viewModel.carModel == "" ||
-        viewModel.licsencePlate == ""}
+        viewModel.carModel == ""
+    }
     
     var body: some View{
         
