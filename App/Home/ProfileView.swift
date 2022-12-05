@@ -10,6 +10,9 @@ import Firebase
 import CodeScanner
 
 struct ProfileView: View {
+    
+    @EnvironmentObject var locationSearchViewModel: LocationSearchViewModel
+    
     @State var name:String
     @State var carModel:String
     @State var userId:String
@@ -49,6 +52,9 @@ struct ProfileView: View {
 
 
 struct QRCodeScanner: View {
+    
+    @EnvironmentObject var locationSearchViewModel: LocationSearchViewModel
+    
     @State var isPresentingScanner = false
     @State var scannedCode: String = ""
     
@@ -56,8 +62,11 @@ struct QRCodeScanner: View {
         CodeScannerView(
             codeTypes: [.qr]) { result in
                 if case let .success(code) = result {
+                    
                     self.scannedCode = code.string
+                    locationSearchViewModel.userId = code.string
                     self.isPresentingScanner = false
+
                 }
             }
     }
@@ -72,6 +81,27 @@ struct QRCodeScanner: View {
             .sheet(isPresented: $isPresentingScanner){
                 self.scannerSheet
             }
+            if scannedCode != "" {
+                Button {
+                    if let id = locationSearchViewModel.userId{
+                        locationSearchViewModel.getUserLocation(userId: id)
+                        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
+                            locationSearchViewModel.getUserLocation(userId: id)
+                            
+//                            if locationSearchViewModel.showProfileView == false {
+//                                timer.invalidate()
+//                            }
+                        }
+                        
+                        locationSearchViewModel.showProfileView.toggle()
+                    }
+                  
+                } label: {
+                    Text("follow Abdallah ?")
+                }
+
+            }
+            
         }
     }
 }

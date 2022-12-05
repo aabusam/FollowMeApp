@@ -84,7 +84,7 @@ class LoginViewModel: ObservableObject{
         self.userId = userId
         let db = Firestore.firestore()
 
-        let docRef = db.collection("Bookings").document(userId)
+        let docRef = db.collection("Users").document(userId)
 
         docRef.getDocument { (document, error) in
             guard error == nil else {
