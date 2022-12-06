@@ -21,6 +21,7 @@
 		EB1BD3472933195B004C8023 /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = EB1BD3462933195B004C8023 /* CodeScanner */; };
 		EB1F5DAF29359A2D009E4155 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1F5DAE29359A2D009E4155 /* LocationManager.swift */; };
 		EB1F5DB129361EFD009E4155 /* LocationSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1F5DB029361EFD009E4155 /* LocationSearchViewModel.swift */; };
+		EBAEFE3E293FA8DF00A360C2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EBAEFE3D293FA8DF00A360C2 /* GoogleService-Info.plist */; };
 		EBB751142914516C00F5995B /* FollowMeAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB751132914516C00F5995B /* FollowMeAppApp.swift */; };
 		EBB751182914516E00F5995B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBB751172914516E00F5995B /* Assets.xcassets */; };
 		EBB7511B2914516E00F5995B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBB7511A2914516E00F5995B /* Preview Assets.xcassets */; };
@@ -29,7 +30,6 @@
 		EBB7515129176DB200F5995B /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = EBB7515029176DB200F5995B /* FirebaseFirestore */; };
 		EBB7515F2918607200F5995B /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = EBB7515E2918607200F5995B /* FirebaseAuth */; };
 		EBB7516B2918944700F5995B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB7516A2918944700F5995B /* ContentView.swift */; };
-		EBB751712918A85800F5995B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EBB751702918A85700F5995B /* GoogleService-Info.plist */; };
 		EBB751742918A8A200F5995B /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = EBB751732918A8A200F5995B /* FirebaseAuth */; };
 /* End PBXBuildFile section */
 
@@ -47,13 +47,13 @@
 		EB1BD3432932FD58004C8023 /* QRCodeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeView.swift; sourceTree = "<group>"; };
 		EB1F5DAE29359A2D009E4155 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		EB1F5DB029361EFD009E4155 /* LocationSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchViewModel.swift; sourceTree = "<group>"; };
+		EBAEFE3D293FA8DF00A360C2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EBB751102914516C00F5995B /* FollowMeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FollowMeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBB751132914516C00F5995B /* FollowMeAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowMeAppApp.swift; sourceTree = "<group>"; };
 		EBB751172914516E00F5995B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EBB7511A2914516E00F5995B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EBB751252914C42F00F5995B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		EBB7516A2918944700F5995B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		EBB751702918A85700F5995B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,7 +130,7 @@
 				EBB7512E2917296D00F5995B /* App */,
 				EBAEFE32293BF88E00A360C2 /* CarTracking */,
 				EBB751252914C42F00F5995B /* Info.plist */,
-				EBB751702918A85700F5995B /* GoogleService-Info.plist */,
+				EBAEFE3D293FA8DF00A360C2 /* GoogleService-Info.plist */,
 				EBB751172914516E00F5995B /* Assets.xcassets */,
 				EBB751192914516E00F5995B /* Preview Content */,
 			);
@@ -235,8 +235,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBB7511B2914516E00F5995B /* Preview Assets.xcassets in Resources */,
-				EBB751712918A85800F5995B /* GoogleService-Info.plist in Resources */,
 				EBB751182914516E00F5995B /* Assets.xcassets in Resources */,
+				EBAEFE3E293FA8DF00A360C2 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
