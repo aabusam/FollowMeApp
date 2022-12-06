@@ -10,11 +10,13 @@ import MapKit
 import CoreLocation
 
 struct MapViewRepresentable: UIViewRepresentable{
+    @Binding var mapViewState: MapViewState
     
     let mapView = MKMapView()
     let locationManger =  LocationManger()
     
     @EnvironmentObject var locationSearchViewModel: LocationSearchViewModel
+    
     
     func makeUIView(context: Context) -> some UIView {
         mapView.delegate = context.coordinator
@@ -27,11 +29,18 @@ struct MapViewRepresentable: UIViewRepresentable{
     
     func updateUIView(_ uiView: UIViewType, context: Context) {
         
-        if let coordinate = locationSearchViewModel.userLocation {
+        switch mapViewState {
+            case .isFollowing:
+                if let coordinate = locationSearchViewModel.userLocation {
+                
+                context.coordinator.addAndSelectAnnotation(withCoordinate: coordinate)
+                context.coordinator.configurePolyline(withDestinationCoordinate: coordinate)
+            }
+            case .isNotFollowing:
+                context.coordinator.clearMapView()
             
-            context.coordinator.addAndSelectAnnotation(withCoordinate: coordinate)
-            context.coordinator.configurePolyline(withDestinationCoordinate: coordinate)
         }
+        
     }
     
     func makeCoordinator() -> MapCoordinator {
@@ -47,6 +56,8 @@ extension MapViewRepresentable {
     class MapCoordinator: NSObject, MKMapViewDelegate{
         let parent: MapViewRepresentable
         var userLocation: CLLocationCoordinate2D?
+        var currentRegion: MKCoordinateRegion?
+        
         init(parent: MapViewRepresentable){
             self.parent = parent
             super.init()
@@ -61,6 +72,9 @@ extension MapViewRepresentable {
                 span: MKCoordinateSpan(
                     latitudeDelta: 0.05,
                     longitudeDelta: 0.05))
+            
+            self.currentRegion = region
+            
             parent.mapView.setRegion(region, animated: true)
             parent.locationSearchViewModel.sendCurrentLocation(location: userLocation)
             
@@ -68,8 +82,8 @@ extension MapViewRepresentable {
         
         func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
             let polyline = MKPolylineRenderer(overlay: overlay)
-            polyline.strokeColor = .systemRed
-            polyline.lineWidth = 6
+            polyline.strokeColor = .systemBlue
+            polyline.lineWidth = 4
             return polyline
         }
         
@@ -109,6 +123,14 @@ extension MapViewRepresentable {
                 }
                 guard let route = response?.routes.first else {return}
                 completion(route)
+            }
+        }
+        
+        func clearMapView() {
+            parent.mapView.removeAnnotations(parent.mapView.annotations)
+            parent.mapView.removeOverlays(parent.mapView.overlays)
+            if let currentRegion = currentRegion {
+                parent.mapView.setRegion(currentRegion, animated: true)
             }
         }
         

@@ -13,7 +13,7 @@ import Firebase
 struct HomeView : View {
     @EnvironmentObject var locationSearchViewModel: LocationSearchViewModel
     @StateObject var viewModel:LoginViewModel
- 
+    @State var mapViewState:MapViewState = .isNotFollowing
     
     var body: some View{
         
@@ -29,6 +29,20 @@ struct HomeView : View {
                             
                         }.frame(maxWidth: .infinity, alignment: .center)
                         
+                        if mapViewState == .isFollowing {
+                            Button {
+                                
+                                mapViewState = .isNotFollowing
+                            } label: {
+                                Image(systemName:  "x.circle")
+                                    .font(.title)
+                                    .foregroundColor(.black)
+                            }
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                        }
+                        
+                        
+                        
                         Button {
                             
                             locationSearchViewModel.showProfileView.toggle()
@@ -43,8 +57,8 @@ struct HomeView : View {
                     .padding()
                     .background(Color.white)
                     
-
-                    MapViewRepresentable()
+                
+                MapViewRepresentable(mapViewState: $mapViewState)
                     
                 
                     LogOutButton(viewModel: viewModel)
@@ -52,7 +66,7 @@ struct HomeView : View {
                 }
        
             if locationSearchViewModel.showProfileView {
-                ProfileView(name: viewModel.name, carModel: viewModel.carModel, userId: viewModel.userId)
+                ProfileView(name: viewModel.name, carModel: viewModel.carModel, userId: viewModel.userId, mapViewState: $mapViewState)
                     .background(Color(.white))
                     .clipShape(RoundedRectangle(cornerRadius: 20))
                     

@@ -16,6 +16,7 @@ struct ProfileView: View {
     @State var name:String
     @State var carModel:String
     @State var userId:String
+    @Binding var mapViewState:MapViewState
     
     var body: some View {
         VStack{
@@ -40,7 +41,7 @@ struct ProfileView: View {
                     .padding()
             }
             
-            QRCodeScanner()
+            QRCodeScanner(mapViewState: $mapViewState)
             
         }
         .padding()
@@ -57,6 +58,8 @@ struct QRCodeScanner: View {
     
     @State var isPresentingScanner = false
     @State var scannedCode: String = ""
+    
+    @Binding var mapViewState:MapViewState
     
     var scannerSheet : some View {
         CodeScannerView(
@@ -83,9 +86,10 @@ struct QRCodeScanner: View {
             }
             if scannedCode != "" {
                 Button {
+                    
                     if let id = locationSearchViewModel.userId{
                         locationSearchViewModel.getUserLocation(userId: id)
-                        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
+                        Timer.scheduledTimer(withTimeInterval: 3, repeats: true) { timer in
                             locationSearchViewModel.getUserLocation(userId: id)
                             
 //                            if locationSearchViewModel.showProfileView == false {
@@ -94,6 +98,7 @@ struct QRCodeScanner: View {
                         }
                         
                         locationSearchViewModel.showProfileView.toggle()
+                        mapViewState = .isFollowing
                     }
                   
                 } label: {

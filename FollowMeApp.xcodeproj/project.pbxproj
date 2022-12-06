@@ -22,6 +22,7 @@
 		EB1F5DAF29359A2D009E4155 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1F5DAE29359A2D009E4155 /* LocationManager.swift */; };
 		EB1F5DB129361EFD009E4155 /* LocationSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1F5DB029361EFD009E4155 /* LocationSearchViewModel.swift */; };
 		EBAEFE3E293FA8DF00A360C2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EBAEFE3D293FA8DF00A360C2 /* GoogleService-Info.plist */; };
+		EBAEFE42293FDA2F00A360C2 /* MapViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAEFE41293FDA2F00A360C2 /* MapViewState.swift */; };
 		EBB751142914516C00F5995B /* FollowMeAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB751132914516C00F5995B /* FollowMeAppApp.swift */; };
 		EBB751182914516E00F5995B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBB751172914516E00F5995B /* Assets.xcassets */; };
 		EBB7511B2914516E00F5995B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBB7511A2914516E00F5995B /* Preview Assets.xcassets */; };
@@ -48,6 +49,7 @@
 		EB1F5DAE29359A2D009E4155 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		EB1F5DB029361EFD009E4155 /* LocationSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchViewModel.swift; sourceTree = "<group>"; };
 		EBAEFE3D293FA8DF00A360C2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EBAEFE41293FDA2F00A360C2 /* MapViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewState.swift; sourceTree = "<group>"; };
 		EBB751102914516C00F5995B /* FollowMeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FollowMeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBB751132914516C00F5995B /* FollowMeAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowMeAppApp.swift; sourceTree = "<group>"; };
 		EBB751172914516E00F5995B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 			children = (
 				EB1BD32829328C96004C8023 /* MapViewRepresentable.swift */,
 				EB1F5DB029361EFD009E4155 /* LocationSearchViewModel.swift */,
+				EBAEFE41293FDA2F00A360C2 /* MapViewState.swift */,
 			);
 			path = CarTracking;
 			sourceTree = "<group>";
@@ -254,6 +257,7 @@
 				EB1BD339293295C9004C8023 /* SignUpViewModel.swift in Sources */,
 				EB1BD33C293295C9004C8023 /* LoginView.swift in Sources */,
 				EB1BD33A293295C9004C8023 /* SighnUpView.swift in Sources */,
+				EBAEFE42293FDA2F00A360C2 /* MapViewState.swift in Sources */,
 				EB1BD33E293295F7004C8023 /* TextFieldView.swift in Sources */,
 				EB1BD32929328C96004C8023 /* MapViewRepresentable.swift in Sources */,
 				EBB7516B2918944700F5995B /* ContentView.swift in Sources */,
