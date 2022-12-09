@@ -20,9 +20,7 @@ class LocationSearchViewModel: NSObject, ObservableObject {
     
     @Published var showProfileView: Bool = false
     @Published var showDirectionView:Bool = false
-   
-    
-    //MARK: - Helpers
+
     
     
 }

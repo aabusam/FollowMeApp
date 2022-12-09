@@ -10,5 +10,6 @@ import Foundation
 enum MapViewState {
     case isFollowing
     case isNotFollowing
-    
+    case clear
 }
+

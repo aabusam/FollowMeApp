@@ -88,17 +88,19 @@ struct QRCodeScanner: View {
                 Button {
                     
                     if let id = locationSearchViewModel.userId{
-                        locationSearchViewModel.getUserLocation(userId: id)
-                        Timer.scheduledTimer(withTimeInterval: 3, repeats: true) { timer in
-                            locationSearchViewModel.getUserLocation(userId: id)
-                            
-//                            if locationSearchViewModel.showProfileView == false {
-//                                timer.invalidate()
-//                            }
-                        }
                         
                         locationSearchViewModel.showProfileView.toggle()
+                        locationSearchViewModel.getUserLocation(userId: id)
+                        Timer.scheduledTimer(withTimeInterval: 3, repeats: true) { timer in
+                            if mapViewState == .isNotFollowing{
+                                    timer.invalidate()
+                                }
+                            
+                            locationSearchViewModel.getUserLocation(userId: id)
+                            
+                        }
                         mapViewState = .isFollowing
+                        
                     }
                   
                 } label: {

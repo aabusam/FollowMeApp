@@ -11,6 +11,7 @@ import CoreLocation
 
 struct MapViewRepresentable: UIViewRepresentable{
     @Binding var mapViewState: MapViewState
+    @Binding var directions: [String]
     
     let mapView = MKMapView()
     let locationManger =  LocationManger()
@@ -39,6 +40,10 @@ struct MapViewRepresentable: UIViewRepresentable{
             case .isNotFollowing:
                 context.coordinator.clearMapView()
             
+            case .clear:
+            
+            context.coordinator.clearMapView()
+            locationSearchViewModel.userLocation = nil
         }
         
     }
@@ -63,6 +68,26 @@ extension MapViewRepresentable {
             super.init()
         }
         
+        func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+            if annotation is MKUserLocation {
+                return nil
+            }
+            var annotationView = parent.mapView.dequeueReusableAnnotationView(withIdentifier: "custom")
+
+            if annotationView == nil{
+                annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "custom")
+
+            }
+
+            else {
+                annotationView?.annotation = annotation
+            }
+            annotationView?.image = UIImage(systemName: "location.fill")
+            return annotationView
+        }
+        
+        
+        
         func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
             self.userLocation = userLocation.coordinate
             let region = MKCoordinateRegion(
@@ -82,8 +107,8 @@ extension MapViewRepresentable {
         
         func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
             let polyline = MKPolylineRenderer(overlay: overlay)
-            polyline.strokeColor = .systemBlue
-            polyline.lineWidth = 4
+            polyline.strokeColor = .systemYellow
+            polyline.lineWidth = 3
             return polyline
         }
         
@@ -98,6 +123,7 @@ extension MapViewRepresentable {
         }
         
         func configurePolyline(withDestinationCoordinate coordinate: CLLocationCoordinate2D){
+            parent.mapView.removeOverlays(parent.mapView.overlays)
             guard let userLocationCoordinate = self.userLocation else {return}
             guard let destinationCoordinate = parent.locationSearchViewModel.userLocation else {return}
                     
@@ -115,6 +141,8 @@ extension MapViewRepresentable {
             let request = MKDirections.Request()
             request.source = MKMapItem(placemark: userPlaceMark)
             request.destination = MKMapItem(placemark: destPlaceMark)
+            request.transportType = .automobile
+            
             let directions = MKDirections(request: request)
             directions.calculate { response, error in
                 if let error = error {
@@ -123,10 +151,12 @@ extension MapViewRepresentable {
                 }
                 guard let route = response?.routes.first else {return}
                 completion(route)
+                self.parent.directions = route.steps.map{$0.instructions}.filter{!$0.isEmpty}
             }
         }
         
         func clearMapView() {
+            
             parent.mapView.removeAnnotations(parent.mapView.annotations)
             parent.mapView.removeOverlays(parent.mapView.overlays)
             if let currentRegion = currentRegion {
@@ -134,6 +164,7 @@ extension MapViewRepresentable {
             }
         }
         
+
         
         
     }

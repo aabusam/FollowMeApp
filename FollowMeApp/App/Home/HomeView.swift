@@ -14,6 +14,7 @@ struct HomeView : View {
     @EnvironmentObject var locationSearchViewModel: LocationSearchViewModel
     @StateObject var viewModel:LoginViewModel
     @State var mapViewState:MapViewState = .isNotFollowing
+    @State private var directions: [String] = []
     
     var body: some View{
         
@@ -24,7 +25,7 @@ struct HomeView : View {
                         
                         VStack() {
                             
-                            Text("Follow Me")
+                            Text("Follow App")
                                 .font(.title)
                             
                         }.frame(maxWidth: .infinity, alignment: .center)
@@ -34,6 +35,7 @@ struct HomeView : View {
                                 
                                 mapViewState = .isNotFollowing
                             } label: {
+                                
                                 Image(systemName:  "x.circle")
                                     .font(.title)
                                     .foregroundColor(.black)
@@ -57,10 +59,20 @@ struct HomeView : View {
                     .padding()
                     .background(Color.white)
                     
-                
-                MapViewRepresentable(mapViewState: $mapViewState)
+                    if mapViewState == .isFollowing {
+//                        List {
+//                            ForEach(0..<directions.count, id: \.self){ direction in
+//                                Text(directions[direction])
+//                                    .padding()
+//                            }
+//                        }
+                        
+                        Text(directions.first ?? "Continue Striaght Ahead")
+                    }
                     
                 
+                MapViewRepresentable(mapViewState: $mapViewState, directions: $directions)
+                    
                     LogOutButton(viewModel: viewModel)
                         .padding()
                 }
