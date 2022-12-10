@@ -1,6 +1,6 @@
 //
-//  FollowMeAppApp.swift
-//  FollowMeApp
+//  FollowAppApp.swift
+//  FollowApp
 //
 //  Created by Abdallah Abu Samaha on 11/3/22.
 //
@@ -17,7 +17,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 }
 
 @main
-struct FollowMeAppApp: App {
+struct FollowAppApp: App {
     @StateObject var locationSearchViewModel = LocationSearchViewModel()
     // register app delegate for Firebase setup
      @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate

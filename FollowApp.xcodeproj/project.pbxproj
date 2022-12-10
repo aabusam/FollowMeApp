@@ -23,7 +23,7 @@
 		EB1F5DB129361EFD009E4155 /* LocationSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1F5DB029361EFD009E4155 /* LocationSearchViewModel.swift */; };
 		EBAEFE3E293FA8DF00A360C2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EBAEFE3D293FA8DF00A360C2 /* GoogleService-Info.plist */; };
 		EBAEFE42293FDA2F00A360C2 /* MapViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAEFE41293FDA2F00A360C2 /* MapViewState.swift */; };
-		EBB751142914516C00F5995B /* FollowMeAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB751132914516C00F5995B /* FollowMeAppApp.swift */; };
+		EBB751142914516C00F5995B /* FollowAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB751132914516C00F5995B /* FollowAppApp.swift */; };
 		EBB751182914516E00F5995B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBB751172914516E00F5995B /* Assets.xcassets */; };
 		EBB7511B2914516E00F5995B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBB7511A2914516E00F5995B /* Preview Assets.xcassets */; };
 		EBB7514D29176DB200F5995B /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = EBB7514C29176DB200F5995B /* FirebaseAnalytics */; };
@@ -50,8 +50,8 @@
 		EB1F5DB029361EFD009E4155 /* LocationSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchViewModel.swift; sourceTree = "<group>"; };
 		EBAEFE3D293FA8DF00A360C2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EBAEFE41293FDA2F00A360C2 /* MapViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewState.swift; sourceTree = "<group>"; };
-		EBB751102914516C00F5995B /* FollowMeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FollowMeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		EBB751132914516C00F5995B /* FollowMeAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowMeAppApp.swift; sourceTree = "<group>"; };
+		EBB751102914516C00F5995B /* FollowApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FollowApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBB751132914516C00F5995B /* FollowAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowAppApp.swift; sourceTree = "<group>"; };
 		EBB751172914516E00F5995B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EBB7511A2914516E00F5995B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EBB751252914C42F00F5995B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -122,7 +122,7 @@
 		EBB751112914516C00F5995B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EBB751102914516C00F5995B /* FollowMeApp.app */,
+				EBB751102914516C00F5995B /* FollowApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -151,7 +151,7 @@
 		EBB7512E2917296D00F5995B /* App */ = {
 			isa = PBXGroup;
 			children = (
-				EBB751132914516C00F5995B /* FollowMeAppApp.swift */,
+				EBB751132914516C00F5995B /* FollowAppApp.swift */,
 				EBB7516A2918944700F5995B /* ContentView.swift */,
 				EB1BD3322932950D004C8023 /* SignIn_SignUp */,
 				EB1BD331293294F6004C8023 /* Home */,
@@ -169,9 +169,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		EBB7510F2914516C00F5995B /* FollowMeApp */ = {
+		EBB7510F2914516C00F5995B /* FollowApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EBB7511E2914516E00F5995B /* Build configuration list for PBXNativeTarget "FollowMeApp" */;
+			buildConfigurationList = EBB7511E2914516E00F5995B /* Build configuration list for PBXNativeTarget "FollowApp" */;
 			buildPhases = (
 				EBB7510C2914516C00F5995B /* Sources */,
 				EBB7510D2914516C00F5995B /* Frameworks */,
@@ -181,7 +181,7 @@
 			);
 			dependencies = (
 			);
-			name = FollowMeApp;
+			name = FollowApp;
 			packageProductDependencies = (
 				EBB7514C29176DB200F5995B /* FirebaseAnalytics */,
 				EBB7514E29176DB200F5995B /* FirebaseDatabase */,
@@ -191,7 +191,7 @@
 				EB1BD3462933195B004C8023 /* CodeScanner */,
 			);
 			productName = FollowMeApp;
-			productReference = EBB751102914516C00F5995B /* FollowMeApp.app */;
+			productReference = EBB751102914516C00F5995B /* FollowApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -209,7 +209,7 @@
 					};
 				};
 			};
-			buildConfigurationList = EBB7510B2914516C00F5995B /* Build configuration list for PBXProject "FollowMeApp" */;
+			buildConfigurationList = EBB7510B2914516C00F5995B /* Build configuration list for PBXProject "FollowApp" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -227,7 +227,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EBB7510F2914516C00F5995B /* FollowMeApp */,
+				EBB7510F2914516C00F5995B /* FollowApp */,
 			);
 		};
 /* End PBXProject section */
@@ -261,7 +261,7 @@
 				EB1BD33E293295F7004C8023 /* TextFieldView.swift in Sources */,
 				EB1BD32929328C96004C8023 /* MapViewRepresentable.swift in Sources */,
 				EBB7516B2918944700F5995B /* ContentView.swift in Sources */,
-				EBB751142914516C00F5995B /* FollowMeAppApp.swift in Sources */,
+				EBB751142914516C00F5995B /* FollowAppApp.swift in Sources */,
 				EB1F5DAF29359A2D009E4155 /* LocationManager.swift in Sources */,
 				EB1BD3442932FD58004C8023 /* QRCodeView.swift in Sources */,
 				EB1BD3422932FBB5004C8023 /* ProfileView.swift in Sources */,
@@ -398,6 +398,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FollowMeApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = FollowApp;
 				INFOPLIST_KEY_NSCameraUsageDescription = "we need the camera to scan QR code";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "";
@@ -433,6 +434,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FollowMeApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = FollowApp;
 				INFOPLIST_KEY_NSCameraUsageDescription = "we need the camera to scan QR code";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "";
@@ -459,7 +461,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		EBB7510B2914516C00F5995B /* Build configuration list for PBXProject "FollowMeApp" */ = {
+		EBB7510B2914516C00F5995B /* Build configuration list for PBXProject "FollowApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EBB7511C2914516E00F5995B /* Debug */,
@@ -468,7 +470,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EBB7511E2914516E00F5995B /* Build configuration list for PBXNativeTarget "FollowMeApp" */ = {
+		EBB7511E2914516E00F5995B /* Build configuration list for PBXNativeTarget "FollowApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EBB7511F2914516E00F5995B /* Debug */,

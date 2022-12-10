@@ -36,7 +36,7 @@ struct HomeView : View {
                                 mapViewState = .isNotFollowing
                             } label: {
                                 
-                                Image(systemName:  "x.circle")
+                                Image(systemName:  "arrow.left")
                                     .font(.title)
                                     .foregroundColor(.black)
                             }
